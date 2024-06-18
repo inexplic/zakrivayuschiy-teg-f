@@ -3,17 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Закрывающий тег</title>
+    <meta name="color-scheme" content="dark light">
+    
     <link rel="stylesheet" href="./fonts/fonts.css" />
     <link rel="stylesheet" href="./styles/variables.css" />
     <link rel="stylesheet" href="./styles/globals.css" />
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/animations.css" />
     <link rel="stylesheet" href="./styles/themes.css" />
+
+    <link rel="icon" href="./images/favicon.ico" sizes="any">
+    <link rel="icon" href="./images/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="./images/faviconmobile.png">
+
+    <title>Закрывающий тег</title>
+
     <script src="./scripts/set-theme.js"></script>
   </head>
   <body class="page">
     <header class="header">
+      <h1 class="heading">&lt;/HTML&gt;</h1>
+      <h2 class="header__title">закрывающий тег</h2>
       <nav class="theme-menu header__theme-menu">
         <!-- Не меняйте разметку этого списка, иначе скрипты перестанут работать -->
         <ul class="theme-menu__list">
@@ -40,7 +50,45 @@
         </ul>
       </nav>
     </header>
-    <main></main>
+    <main class="main-section">
+      <article class="main-section__card">
+        <h3 class="card__title">
+          Фритрек и нулевой спринт: Подготовка к работе
+        </h3>
+        <div class="card__block-image">
+          <img class="card__image" src="./images/car_image.png" alt="Неольшой фургончик на дороге под ночным звёздным небом. Иллюстрация в восьмибитном стиле.">
+          <span class="label">&lt;/HTML&gt</span>
+        </div>
+        <div class="card__footer">
+          <p class="card__text">
+          Это было самое начало пути. На этом этапе важно было проникнуться основами и настроиться на учёбу. И, возможно, подумать, как новые знания могут повлиять на ваше будущее.
+          </p>
+          <p class="card__text">
+          Место для ваших воспоминаний о начале обучения.
+          </p>
+          <div class="like-block">
+            <button class="card__icon-button"
+            type="button">
+              <svg class="like-icon" viewBox="0 0 27 24" aria-hidden="true">
+                <use href="./svg/heart.svg#heart">
+              </svg>
+            </button>
+            <button class="card__like-button"
+            type="button">
+              <span class="button__text">Like</span>
+            </button>
+          </div>
+        </div>
+      </article>
+    </main>
+    <footer class="footer">
+      <button class="footer__save-button">
+        <svg class="save-icon" viewBox="0 0 21 21" aria-hidden="true">
+          <use href="./svg/floppy.svg#floppy">
+        </svg>
+        <span class='button__text'>Сохранить на память</span>
+      </button>
+    </footer>
     <script src="./scripts/like.js"></script>
   </body>
 </html>

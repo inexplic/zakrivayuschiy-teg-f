@@ -17,4 +17,210 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-family: var(--main-font), 'Arial', sans-serif;
+  font-variation-settings: 'wght' var(--main-content-weight, 400);
+  color: var(--accent-color, #000);
+
+  background-image: repeating-linear-gradient(to right, var(--repeating-liner-gradient, #d3d3d3) 2px, transparent 2px 4px, var(--repeating-liner-gradient, #d3d3d3) 4px 6px, transparent 6px 8px), repeating-linear-gradient(to bottom, var(--repeating-liner-gradient, #d3d3d3) 2px, transparent 2px 4px, var(--repeating-liner-gradient, #d3d3d3) 4px 6px, transparent 6px 8px), 
+  var(--liner-gradient, linear-gradient(#E7E7E7 0.01%, #1A1A1A));
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* header */
+
+.header {
+  font-family: var(--accent-font), 'Courier New', monospace;
+ 
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1;
+  background-color: var(--background-color, #fff);
+  border: 2px solid var(--accent-color, #000);
+
+  padding-inline: clamp(0.875rem, -1.4577rem + 9.9531vw, 7.5rem);
+  padding-block: clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem) 25px;
+  max-inline-size: 700px;
+  margin: auto;
+  margin-block: 100px;
+}
+
+.heading {
+  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+  margin-block-end: 20px;
+  font-weight: normal;
+}
+
+.header__title {
+  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+  margin-block-end: 25px;
+  font-weight: normal;
+}
+
+.header__theme-menu {
+  display: flex;
+  justify-content: center;
+}
+
+.theme-menu__list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+
+  text-align: start;
+}
+
+.theme-menu__button {
+  font-size: 14px;
+  text-transform: uppercase;
+  line-height: 1;
+  position: relative;
+  transition: opacity 0.5s;
+  cursor: pointer;
+}
+
+.theme-menu__button:hover {
+  opacity: 60%;
+}
+
+.theme-menu__button:disabled {
+  opacity: 60%;
+}
+
+.theme-menu__button:disabled::before {
+  content: '▶';
+  position: absolute;
+  inset-inline-start: -20px;
+  inline-size: 16px;
+  block-size: 13px;
+}
+
+.theme-menu__button:focus {
+  outline: none;
+}
+
+.theme-menu__button:focus-visible {
+  outline: none;
+}
+
+/* main section */
+
+.main-section {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-section__card {
+  background-color: var(--background-color, #fff);
+  max-inline-size: 700px;
+  border: 2px solid var(--accent-color, #000);
+}
+
+.card__title {
+  font-variation-settings: 'wght' var(--heading-weight, 700);
+  font-size: 18px;
+  line-height: 1.21;
+  padding-block: 3px;
+  padding-inline-start: 10px;
+}
+
+.card__block-image {
+  position: relative;
+  /* mix-blend-mode: hard-light; */
+}
+
+.card__image {
+  inline-size: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center;
+}
+
+.label {
+  position: absolute;
+  inset-block-start: 25px;
+  inset-inline-end: 25px;
+  font-family: var(--accent-font), 'Courier New', monospace;
+  font-size: 14px;
+  line-height: 1;
+  opacity: 50%;
+  text-shadow:
+  -1px 0 var(--text-stroke-color, #fff), 
+  0 1px var(--text-stroke-color, #fff), 
+  1px 0 var(--text-stroke-color, #fff), 
+  0 -1px var(--text-stroke-color, #fff);
+}
+
+@supports((text-stroke: 1px var(--text-stroke-color, #fff)) or (-webkit-text-stroke: 1px var(--text-stroke-color, #fff))) {
+  .label {
+      -webkit-text-stroke: 1px var(--text-stroke-color, #fff);
+      text-stroke: 1px var(--text-stroke-color, #fff);
+      text-shadow: none;
+  }
+} 
+
+.card__footer {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+}
+
+.card__text {
+  font-size: 18px;
+  line-height: 1.16;
+}
+
+.like-block {
+  align-self: flex-end;
+
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.card__icon-button {
+  inline-size: 27px;
+  block-size: 24px;
+}
+
+.like-icon {
+  
+}
+
+.card__like-button {
+  max-block-size: 38px;
+  padding: 10px 35px;
+  border: 2px solid var(--accent-color, #000);
+}
+
+.button__text {
+  font-family: var(--accent-font), 'Courier New', monospace;
+  font-size: 14px;
+}
+
+/* footer */
+
+.footer {
+  padding-block: 50px 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.footer__save-button {
+  background-color: var(--background-color, #fff);
+  border: 2px solid var(--accent-color, #000);
+  padding: 15px 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.save-icon {
+  inline-size: 21px;
 }
