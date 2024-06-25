@@ -406,8 +406,9 @@
   justify-content: center;
   align-items: center;
 
+  border: 2px solid var(--accent-color);
   padding-block: 30px;
-  padding-inline: calc(4.5rem - clamp(1.875rem, 1.6109rem + 1.1268vw, 2.625rem));
+  padding-inline: calc(4.23rem - clamp(1.875rem, 1.6549rem + 0.9390vw, 2.5rem));
 
   background-color: var(--background-color);
 }
